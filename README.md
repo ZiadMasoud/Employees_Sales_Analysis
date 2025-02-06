@@ -1,1 +1,65 @@
 # Employees_Sales_Analysis
+
+## Project Description
+This project involves analyzing the sales performance of employees within a company. The goal is to identify trends, patterns, and insights that can help improve sales strategies and employee performance.
+
+## DEPI Diploma Task
+This project is part of the DEPI Diploma program. It serves as a practical task to apply data analytics skills learned during the course.
+
+## Overview
+You’ll work with two datasets:
+1. Sales Data: Contains sales transactions, customer information, and purchase details (saved in one sheet as `sales_data.csv`).
+2. Employee Data: Contains employee details, salaries, and department information (saved in another sheet as `employee_data.csv`).
+
+## Data Description
+
+### 1. Sales Data (`sales_data.csv`)
+| Column Name       | Description                                  |
+|-------------------|----------------------------------------------|
+| `TransactionID`   | Unique ID for the transaction                |
+| `CustomerID`      | Unique ID for the customer                   |
+| `SalesAmount`     | Sale amount in various formats (e.g., `$5,000`, `5300.50`) |
+| `PurchaseDate`    | Date of purchase in inconsistent formats     |
+| `EmployeeID`      | ID of the employee who completed the sale    |
+
+### 2. Employee Data (`employee_data.csv`)
+| Column Name       | Description                                  |
+|-------------------|----------------------------------------------|
+| `EmployeeID`      | Unique ID for the employee                   |
+| `Name`            | Name of the employee                         |
+| `DepartmentID`    | Department to which the employee belongs     |
+| `Salary`          | Employee salary in various formats           |
+| `SupervisorID`    | ID of the employee's supervisor (self-join)  |
+
+## Project Tasks
+
+### Part 1: Data Cleaning and Preparation (Python)
+1. Load the Data:
+   - Load `sales_data.csv` and `employee_data.csv` into separate pandas DataFrames.
+2. Clean Sales Data:
+   - Convert `SalesAmount` to numeric after removing symbols and commas.
+   - Standardize `PurchaseDate` to pandas `datetime`.
+   - Handle missing or invalid data by replacing them with appropriate defaults (e.g., `NaN` for missing data).
+3. Clean Employee Data:
+   - Convert `Salary` to numeric after removing symbols and commas.
+   - Replace inconsistent `EmployeeID` or `SupervisorID` with clean integers.
+   - Handle any missing `SupervisorID` values by filling them with `NaN`.
+4. Save Cleaned Data:
+   - Save the cleaned sales and employee datasets to separate files (`cleaned_sales.csv` and `cleaned_employees.csv`).
+
+### Part 2: SQL Analysis
+1. Set Up a SQL Database:
+   - Import the cleaned data into SQL tables named `sales` and `employees`.
+2. SQL Queries:
+   Perform the following tasks using SQL queries:
+   - Query 1: Retrieve the total sales for each employee.
+   - Query 2: Identify the top-performing employee in terms of sales.
+   - Query 3: Find departments with the highest total salaries.
+   - Query 4: List each employee and their supervisor's name.
+   - Query 5: Retrieve customers with purchases above $10,000.
+
+## Deliverables
+1. Cleaned data files: `cleaned_sales.csv` and `cleaned_employees.csv`.
+2. A Python script for data cleaning.
+3. SQL queries for analysis.
+4. A brief summary report detailing findings from SQL queries.
