@@ -16,17 +16,6 @@ Analysis of company sales performance to identify trends and improve sales strat
 - Department-wise analysis
 - Customer purchase patterns
 
-## Project Structure
-```
-├── data/
-│   ├── sales_data.csv
-│   └── employee_data.csv
-├── src/
-│   └── Dashboard_.png
-├── cleaned_sales.csv
-└── cleaned_employees.csv
-```
-
 ## Analysis Tasks
 1. **Data Cleaning**
    - Standardize sales amounts and dates
@@ -39,8 +28,3 @@ Analysis of company sales performance to identify trends and improve sales strat
    - Department salary analysis
    - Employee-supervisor relationships
    - High-value customer identification
-
-## Tech Stack
-- Python (Pandas)
-- SQL
-- Data Visualization
